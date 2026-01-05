@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper &amp; Love - Opening Soon</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background: linear-gradient(135deg, #f4f1ec 0%, #e8e5dd 100%);
+            color: #2d1b14;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image:
+                radial-gradient(circle at 20% 80%, rgba(210, 180, 140, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(244, 220, 180, 0.1) 0%, transparent 50%);
+        }
+
+        .container {
+            max-width: 480px;
+            width: 90%;
+            padding: 3.5rem 2.5rem;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(45, 27, 20, 0.15);
+            border: 1px solid rgba(210, 180, 140, 0.3);
+            position: relative;
+        }
+
+        .logo {
+            font-size: 3.2rem;
+            font-weight: 400;
+            color: #8b4513;
+            margin-bottom: 0.8rem;
+            letter-spacing: 0.05em;
+            text-shadow: 1px 1px 2px rgba(139, 69, 19, 0.2);
+        }
+
+        .opening-soon {
+            font-size: 1.4rem;
+            color: #a67c00;
+            font-weight: 500;
+            margin-bottom: 2rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            color: #6b4e31;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+            font-weight: 300;
+        }
+
+        .description {
+            margin-bottom: 3rem;
+            color: #5a4a3d;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        .form-section {
+            background: rgba(244, 237, 220, 0.7);
+            padding: 2rem;
+            border-radius: 16px;
+            border: 1px solid rgba(210, 180, 140, 0.4);
+            margin-bottom: 2rem;
+        }
+
+        .form-section h3 {
+            color: #8b4513;
+            margin-bottom: 1.2rem;
+            font-size: 1.2rem;
+            font-weight: 400;
+        }
+
+        .email-input {
+            width: 100%;
+            padding: 1.1rem 1.5rem;
+            border: 2px solid rgba(139, 69, 19, 0.3);
+            border-radius: 12px;
+            font-size: 1rem;
+            background: white;
+            color: #2d1b14;
+            margin-bottom: 1.2rem;
+            font-family: inherit;
+            transition: all 0.3s;
+        }
+
+        .email-input:focus {
+            outline: none;
+            border-color: #d4af37;
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+        }
+
+        .subscribe-btn {
+            width: 100%;
+            padding: 1.1rem 2rem;
+            background: #8b4513;
+            color: #f5f5dc;
+            border: none;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            font-family: inherit;
+            transition: all 0.3s;
+            letter-spacing: 0.5px;
+        }
+
+        .subscribe-btn:hover {
+            background: #a0522d;
+            transform: translateY(-1px);
+            box-shadow: 0 8px 25px rgba(139, 69, 19, 0.3);
+        }
+
+        .social-links {
+            font-size: 0.95rem;
+        }
+
+        .social-links a {
+            color: #8b4513;
+            text-decoration: none;
+            margin: 0 1.2rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #d4af37;
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                margin: 1.5rem;
+                padding: 2.5rem 2rem;
+            }
+
+            .logo {
+                font-size: 2.5rem;
+            }
+
+            .opening-soon {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="logo">Paper &amp; Love</h1>
+        <div class="opening-soon">Opening Soon</div>
+        <p class="tagline">Pre-Loved Pages, Timeless Treasures</p>
+        <p class="description">
+            Your destination for second-hand books of every genre.
+            From rare military histories to beloved classics,
+            discover hidden gems at prices you'll love.
+        </p>
+
+        <div class="form-section">
+            <h3>Join Our Opening List</h3>
+            <form id="subscribeForm" action="https://formspree.io/f/mgovbkzy" method="POST">
+                <input type="email" class="email-input" placeholder="Enter email for first-look deals" required
+                    name="email">
+                <button type="submit" class="subscribe-btn" >Reserve My Spot</button>
+            </form>
+        </div>
+
+        <div class="social-links">
+            📱 <a href="https://t.me/paperandlove" target="_blank" rel="noopener noreferrer">Telegram Updates</a> |
+            🐦 <a href="https://twitter.com/paperandlove" target="_blank" rel="noopener noreferrer">X</a> |
+            📷 <a href="https://instagram.com/paperandlove" target="_blank" rel="noopener noreferrer">Instagram</a>
+        </div>
+    </div>
+
+    <script>
+        (function () {
+            const form = document.getElementById('subscribeForm');
+            if (!form) return;
+            form.addEventListener('submit', function (event) {
+                const emailInput = form.querySelector('.email-input');
+                const email = (emailInput && emailInput.value || '').trim();
+                if (!email || !email.includes('@')) {
+                    event.preventDefault();
+                    alert('Please enter a valid email address.');
+                    if (emailInput) emailInput.focus();
+                    return;
+                }
+                // show confirmation and allow the form to submit to the action (Formspree)
+                alert(`✓ Thank you! You're on the opening list. Exclusive deals coming soon to ${email}`);
+                // form will submit normally
+            });
+        })();
+    </script>
+</body>
+
+</html>
